@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">WhiteNoiseAudioGenerator</string>
+    <string name="play_button">play</string>
+    <string name="stop_button">stop</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+    <string name="frequency">frequency</string>
+    <string name="frequency_text_input">Base tone frequency text input</string>
+    <string name="init_freq">440</string>
+    <string name="enter_frequency">Enter base tone frequency (20-20000)</string>
+    <string name="enter_volume_modulation_amplitude_0_to_disable">Enter wave effect amplitude \n(0 to disable, 32767 max)</string>
+    <string name="enter_volume_mod_amplitude">Enter wave effect amplitude</string>
+    <string name="enter_vol_mod_amplitude">Enter wave effectamplitude</string>
+    <string name="amplitude_modulation_frequency">Amplitude mod frequency (0.1-100)</string>
+    <string name="enter_volume_mod_frequency">Enter wave effect frequency (0.1-100)</string>
+    <string name="amp_amp">0</string>
+    <string name="amp_freq">1</string>
+    <string name="volume_mod_amplitude_slider">Volume mod amplitude slider</string>
+    <string name="volume_mod_frequency">Wave effect frequency (0.1-5)</string>
+    <string name="noise_percent">noise percent</string>
+    <string name="enter_percent_of_noise_in_signal">Enter percent of noise in signal (0-100)</string>
+    <string name="noise_pct">100</string>
+    <string name="select_noise_type">Select noise type</string>
+    <string name="enter_gain_level">Enter gain level (0-2, 1 for no g)</string>
+    <string-array name="noiseChoices">
+        <item>White</item>
+        <item>Pink</item>
+        <item>Brownian</item>
+    </string-array>
+</resources>

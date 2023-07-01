@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="100dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="15dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="260dp" />
+
+    <!--    <TextView-->
+<!--        android:id="@+id/text1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Hello World!"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/sliderBarFreq"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <ImageButton
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/play_button"
+        android:text="@string/play"
+        android:backgroundTint="#00FF00"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_stop"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:layout_constraintBottom_toTopOf="@id/frequency_text" />
+
+    <ImageButton
+        android:id="@+id/btn_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/stop_button"
+        android:text="@string/stop"
+        android:backgroundTint="#FF0000"
+        android:src="@android:drawable/ic_media_pause"
+        app:layout_constraintLeft_toRightOf="@id/btn_play"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:layout_constraintBottom_toTopOf="@id/frequency_edittext" />
+
+<!--
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sliderBarFreq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:valueFrom="1.3"
+        android:value="2.643452676"
+        android:valueTo="4.3"
+        android:contentDescription="@string/frequency"
+        app:labelBehavior="visible"
+        app:layout_constraintTop_toBottomOf="@id/btn_play"
+        app:layout_constraintBottom_toTopOf="@id/frequency_text"
+        app:layout_constraintStart_toStartOf="parent"/>
+-->
+
+    <TextView
+        android:id="@+id/frequency_text"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="@string/enter_frequency"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/btn_play"
+        app:layout_constraintStart_toStartOf="@id/guideline2"/>
+
+    <EditText
+        android:id="@+id/frequency_edittext"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:inputType="number"
+        android:autofillHints="440"
+        android:hint="@string/frequency_text_input"
+        android:maxLength="7"
+        app:layout_constraintTop_toBottomOf="@id/btn_stop"
+        app:layout_constraintStart_toEndOf="@id/guideline3"/>
+
+<!--
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sliderBarAmpAmp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:valueFrom="0"
+        android:value="0"
+        android:valueTo="100"
+        android:contentDescription="@string/volume_mod_amplitude_slider"
+        app:layout_constraintTop_toBottomOf="@id/frequency_text"
+        app:layout_constraintBottom_toTopOf="@id/amp_amp_text"
+        app:layout_constraintStart_toStartOf="parent"/>
+-->
+
+    <TextView
+        android:id="@+id/amp_amp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="@string/enter_volume_modulation_amplitude_0_to_disable"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/frequency_text"
+        app:layout_constraintStart_toStartOf="@id/guideline2"/>
+
+    <EditText
+        android:id="@+id/amp_amp_edittext"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:inputType="number"
+        android:autofillHints="440"
+        android:hint="@string/enter_vol_mod_amplitude"
+        android:maxLength="5"
+        app:layout_constraintTop_toBottomOf="@id/frequency_edittext"
+        app:layout_constraintStart_toEndOf="@id/guideline3"/>
+
+<!--
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sliderBarAmpFreq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:valueFrom="0.1"
+        android:value="1"
+        android:valueTo="100"
+        android:contentDescription="@string/amplitude_modulation_frequency"
+        app:layout_constraintTop_toBottomOf="@id/amp_amp_text"
+        app:layout_constraintBottom_toTopOf="@id/amp_freq_text"
+        app:layout_constraintStart_toStartOf="parent"/>
+-->
+
+    <TextView
+        android:id="@+id/amp_freq_text"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="@string/volume_mod_frequency"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/amp_amp_text"
+        app:layout_constraintStart_toStartOf="@id/guideline2"/>
+
+    <EditText
+        android:id="@+id/amp_freq_edittext"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:inputType="numberDecimal"
+        android:autofillHints="440"
+        android:hint="@string/enter_volume_mod_frequency"
+        android:maxLength="5"
+        app:layout_constraintTop_toBottomOf="@id/amp_amp_edittext"
+        app:layout_constraintStart_toEndOf="@id/guideline3"/>
+
+<!--
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sliderBarNoisePct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:valueFrom="0"
+        android:value="50"
+        android:valueTo="100"
+        android:contentDescription="@string/noise_percent"
+        app:layout_constraintTop_toBottomOf="@id/amp_freq_text"
+        app:layout_constraintBottom_toTopOf="@id/noise_pct_text"
+        app:layout_constraintStart_toStartOf="parent"/>
+-->
+
+    <TextView
+        android:id="@+id/noise_pct_text"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="@string/enter_percent_of_noise_in_signal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/amp_freq_text"
+        app:layout_constraintStart_toStartOf="@id/guideline2"/>
+
+    <EditText
+        android:id="@+id/noise_pct_edittext"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:inputType="numberDecimal"
+        android:autofillHints="50"
+        android:hint="@string/enter_percent_of_noise_in_signal"
+        android:maxLength="5"
+        app:layout_constraintTop_toBottomOf="@id/amp_freq_edittext"
+        app:layout_constraintStart_toEndOf="@id/guideline3"/>
+
+    <TextView
+        android:id="@+id/noise_type_text"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="@string/select_noise_type"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/noise_pct_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/spinnerNoise"/>
+
+    <Spinner
+        android:id="@+id/spinnerNoise"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintTop_toBottomOf="@+id/noise_pct_text"
+        app:layout_constraintStart_toEndOf="@id/noise_type_text"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
