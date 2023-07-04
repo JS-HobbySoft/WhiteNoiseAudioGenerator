@@ -8,7 +8,7 @@ WARNING: The tone and noise are calculated, so this app makes your device perfor
 
 This app has no ads or in-app purchases and collects no data.  
 
-Source code is available on Github: https://github.com/JS-HobbySoft/WhiteNoiseAndToneGenerator
+Source code is available on Github: https://github.com/JS-HobbySoft/WhiteNoiseAudioGenerator
 
 The source code is licensed under AGPL-3.0-or-later.  
 
