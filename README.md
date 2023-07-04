@@ -1,0 +1,15 @@
+# WhiteNoiseAudioGenerator
+
+Generate audio tones or noise
+
+This app will play pure audio tones and three different colors of noise (white, pink, or brownian).  The tone and noise can be mixed with the slider.  The volume can be modulated to produce a wave effect.  The audio must be paused and restarted to pick up any parameter changes. 
+
+WARNING: The tone and noise are calculated, so this app makes your device perform a lot of math.  This can quickly drain the battery.  It is recommended to keep your device attached to a charger if this app will be used for an extended time.  
+
+This app has no ads or in-app purchases and collects no data.  
+
+Source code is available on Github: https://github.com/JS-HobbySoft/WhiteNoiseAndToneGenerator
+
+The source code is licensed under AGPL-3.0-or-later.  
+
+The app icon was created with Stable Diffusion.
